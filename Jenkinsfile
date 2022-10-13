@@ -3,9 +3,7 @@ pipeline{
         stages{
             stage('Make Directory'){
                 steps{
-                    dir('/home/azureuser/') {
-   sh "touch jenkins.txt"
-}
+   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/obianujuaku01/uju-cicd.git']]])                 
                 }
             }
             stage('Make Files'){
