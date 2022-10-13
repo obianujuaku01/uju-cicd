@@ -3,7 +3,9 @@ pipeline{
         stages{
             stage('Make Directory'){
                 steps{
-                    sh "mkdir ~/jenkins-tutorial-test"
+                    dir('/home/azureuser/') {
+    touch jenkins.txt
+}
                 }
             }
             stage('Make Files'){
