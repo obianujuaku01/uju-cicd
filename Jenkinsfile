@@ -4,7 +4,7 @@ pipeline{
             stage('Make Directory'){
                 steps{
                     dir('/home/azureuser/') {
-    touch jenkins.txt
+   sh "touch jenkins.txt"
 }
                 }
             }
